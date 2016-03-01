@@ -16,8 +16,8 @@ class Player3:
         else:
             # use history, opponent_history, score, opponent_score
             # to compute your strategy
-            if len(opponent_history)==0: #It's the first round: collude
-                return 'c'
+            if len(opponent_history)==0: # betray is they were severly punished last time 
+                return 'b'
             elif len(opponent_history)==1:
                 if history[-1]=='c' and opponent_history[-1]=='b':
                     return 'b' # betray is they were severely punished last time
